@@ -16,7 +16,6 @@ public class SubscribeHandler implements MessageHandler {
 		PubSubCallback cb = PubSub.getPubSubCallback(topic);
                 System.out.println(senderClient.getSessionID() + " is trying to subscribe to " + topic);
 		if (cb == null) {
-			//log.error("Topic not found: " + topic);
                     String error = "Topic not found: " + topic;
                     System.out.println(error);
 			return;

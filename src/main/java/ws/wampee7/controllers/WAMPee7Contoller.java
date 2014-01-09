@@ -11,7 +11,7 @@ public class WAMPee7Contoller {
 	 * Registers a topic for this controller without using annotations. If @URIPrefix
 	 * is present it will be put at the beginning of topicSuffix.
 	 *
-	 * Same as calling WAMPlayServer.addTopic(URIPrefix.value() + topicSuffix);
+	 * Same as calling WAMPee7Server.addTopic(URIPrefix.value() + topicSuffix);
 	 *
 	 * @param topicSuffix
 	 */
@@ -29,7 +29,7 @@ public class WAMPee7Contoller {
 	 *
 	 * This version allows for a supplied callback.
 	 *
-	 * Same as calling WAMPlayServer.addTopic(URIPrefix.value() + topicSuffix, cb);
+	 * Same as calling WAMPee7Server.addTopic(URIPrefix.value() + topicSuffix, cb);
 	 *
 	 * @param topicSuffix
 	 */

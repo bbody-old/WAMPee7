@@ -108,7 +108,7 @@ public class PublishHandler implements MessageHandler {
 			return false;
 		}
 
-		if (exclude.size() == 0) {
+		if (exclude.isEmpty()) {
 			return false;
 		}
 
@@ -123,7 +123,7 @@ public class PublishHandler implements MessageHandler {
 			return true;
 		}
 
-		if (eligible.size() == 0) {
+		if (eligible.isEmpty()) {
 			return false;
 		}
 

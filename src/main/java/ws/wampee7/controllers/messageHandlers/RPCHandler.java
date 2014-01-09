@@ -24,7 +24,6 @@ public class RPCHandler implements MessageHandler{
 
 		for (int i = 3; i < message.size(); i++) {
 			args.add(message.get(i));
-                        System.out.println("Processing " + message.get(i).toString());
 		}
 
 		RPCCallback cb = RPC.getCallback(procURI);
@@ -35,7 +34,6 @@ public class RPCHandler implements MessageHandler{
 		}
 
 		try {
-                    System.out.println("In going args..." + args.toString());
 			JsonNode response = cb.call(client.getSessionID(), args.toArray(new JsonNode[args.size()]));
 			client.send(new CallResult(callID, response).toJson());
 		} catch (IllegalArgumentException e) {

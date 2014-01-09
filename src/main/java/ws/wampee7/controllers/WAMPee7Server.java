@@ -25,10 +25,9 @@ import ws.wampee7.models.WAMPee7Client;
 @ServerEndpoint("/wamp")
 public class WAMPee7Server {
 
-    public static String VERSION = "WAMPlay/0.1.6";
+    public static String VERSION = "WAMPee7";
     public static int PROTOCOL_VERSION = 1;
     public static WAMPee7Client lastClient;
-    private static boolean controllersBound = false;
     
     static Map<String, WAMPee7Client> clients = Collections
             .unmodifiableMap(new HashMap<String, WAMPee7Client>());
