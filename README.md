@@ -6,4 +6,5 @@ A library implementation of WAMP using JSR-365 for Websockets (Java EE7), based 
 ## Example
 ### GlassFish 4.0
 [GlassFish 4.0](https://github.com/bbody/GlassFishWAMP)
-
+Or:
+Add Controllers as an entry point to the project. [Example](https://github.com/bbody/GlassFishWAMP/blob/master/src/main/java/ws/wampee7/controllers/entry/EntryPoint.java)
