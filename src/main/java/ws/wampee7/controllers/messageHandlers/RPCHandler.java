@@ -3,6 +3,7 @@ package ws.wampee7.controllers.messageHandlers;
 import java.util.ArrayList;
 import java.util.List;
 import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
 
 
 import ws.wampee7.callbacks.RPCCallback;
@@ -29,7 +30,9 @@ public class RPCHandler implements MessageHandler{
 		RPCCallback cb = RPC.getCallback(procURI);
                 
 		if (cb == null) {
-			client.send(printList(new CallError(callID, procURI, "404", "RPC method not found!").toList()));
+                    ObjectMapper mapper = new ObjectMapper();
+                    JsonNode node = mapper.convertValue(new CallError(callID, procURI, "404", "RPC method not found!").toList(), JsonNode.class);
+			client.send(node);
 			return;
 		}
 
@@ -49,14 +52,4 @@ public class RPCHandler implements MessageHandler{
 			client.send(resp.toJson());
 		}
 	}
-
-        private String printList(List<Object> ls){
-            String s = "[";
-            s += ls.get(0).toString() + ", ";
-            s += "\"" + ls.get(1).toString() + "\", ";
-            s += ls.get(2).toString() + ", ";
-            s += "\"" + ls.get(3).toString() + "\"]";
-            return s;
-        }
-
 }

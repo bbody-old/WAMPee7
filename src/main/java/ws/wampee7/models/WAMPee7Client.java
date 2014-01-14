@@ -39,16 +39,6 @@ public class WAMPee7Client {
                     System.out.println("Cannot send, client dead!");
 		}
 	}
-        
-        public void send(String response) {
-
-		try {
-			out.getBasicRemote().sendText(response);
-		} catch (Exception e) {
-			//log.error("Cannot send, client dead!");
-                    System.out.println("Cannot send, client dead!");
-		}
-	}
 
 	public void setPrefix(String prefix, String URI) {
 		prefixes.put(prefix, URI);
