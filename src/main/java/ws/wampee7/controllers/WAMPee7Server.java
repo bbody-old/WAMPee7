@@ -34,8 +34,6 @@ public class WAMPee7Server {
 
     @OnOpen
     public void onOpen(Session sClient) {
-
-        
         // Get WAMPify the Session
         final WAMPee7Client client = new WAMPee7Client(sClient);
         WAMPee7Server.addClient(client);
